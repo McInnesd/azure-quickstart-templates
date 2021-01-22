@@ -61,7 +61,7 @@
   "variables": {
     "dscScript": "DSC/DCConfiguration.zip",
     "virtualNetworkName": "[concat(toLower(parameters('prefix')), '-vnet')]",
-    "domainName": "contoso.com",
+    "domainName": "hub.adhdan.com",
     "timeZone": "UTC",
     "networkSettings": {
       "virtualNetworkAddressPrefix": "10.0.0.0/16",
@@ -89,8 +89,8 @@
     ],
     "vmInfo": {
       "DC": {
-        "name": "DC01",
-        "disktype": "Premium_LRS",
+        "name": "DCP0001",
+        "disktype": "Standard_LRS",
         "Size": "Standard_B2s",
         "imageReference": {
           "publisher": "MicrosoftWindowsServer",
@@ -100,8 +100,8 @@
         }
       },
       "DPMP": {
-        "name": "DPMP01",
-        "disktype": "Premium_LRS",
+        "name": "DMP0001",
+        "disktype": "Standard_LRS",
         "size": "Standard_B2s",
         "imageReference": {
           "publisher": "MicrosoftWindowsServer",
@@ -111,8 +111,8 @@
         }
       },
       "Client": {
-        "name": "Cl01",
-        "disktype": "Premium_LRS",
+        "name": "ClP0001",
+        "disktype": "Standard_LRS",
         "size": "Standard_B2s",
         "imageReference": {
           "publisher": "MicrosoftWindowsDesktop",
